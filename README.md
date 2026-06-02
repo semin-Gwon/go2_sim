@@ -1,4 +1,6 @@
-# Go2 Intelligence Framework
+# Unitree Go2 Isaac Sim SLAM & Navigation
+
+Language: English | [한국어](README.ko.md)
 
 > This repository is based on content from [leesj24601/Go2_Intelligence_Framework](https://github.com/leesj24601/Go2_Intelligence_Framework).  
 > It has been reorganized and adapted for this local `go2_sim` workspace and portfolio-oriented GitHub publication.
@@ -19,6 +21,7 @@
 ```text
 .
 ├── README.md
+├── README.ko.md
 ├── assets/
 │   └── envs/
 │       ├── color_room.usd
