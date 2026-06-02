@@ -193,7 +193,6 @@ Large or machine-local files are excluded from GitHub:
 
 ```text
 assets/objects/
-local_archive/
 .pretrained_checkpoints/
 maps/
 outputs/
@@ -207,7 +206,7 @@ CLAUDE.md
 
 ## Notes on Assets and Checkpoints
 
-Only the default lightweight USD environment file, `assets/envs/room_env.usd`, is tracked. Other experimental environment files and apartment scene generation scripts are kept locally under `local_archive/` and are intentionally omitted from GitHub.
+Only the default lightweight USD environment file, `assets/envs/room_env.usd`, is tracked. Large object assets, generated maps, local checkpoints, and machine-local files are intentionally omitted from GitHub.
 
 If a script references an omitted asset, place the required file in the expected local path or update the corresponding environment variable before running.
 
