@@ -13,6 +13,53 @@ This project aims to build a comprehensive intelligence framework for the Unitre
 
 ---
 
+## 📁 Repository Structure
+
+```text
+.
+├── README.md                         # Project overview and run guide
+├── assets/
+│   └── envs/                         # Lightweight Isaac Sim USD scene files
+│       ├── color_room.usd
+│       ├── empty_room.usd
+│       ├── object_room.usd
+│       ├── room_env.usd
+│       ├── slam_env.usd
+│       └── yolo_env.usd
+├── config/
+│   ├── go2_nav2_params.yaml          # Nav2 parameters
+│   └── go2_sim.rviz                  # RViz visualization config
+├── docs/                             # Development plans and notes
+│   ├── 00_archive_orb_slam3_task.md
+│   ├── 01_rtabmap_slam_plan.md
+│   ├── 01_rtabmap_slam_presentation.md
+│   ├── 02_policy_decision.md
+│   ├── 03_nav2_plan.md
+│   └── 04_real_robot_deploy.md
+├── launch/
+│   ├── go2_navigation.launch.py      # Nav2 launch file
+│   └── go2_rtabmap.launch.py         # RTAB-Map launch file
+├── scripts/
+│   ├── go2_sim.py                    # Main Isaac Sim + ROS2 simulation entry point
+│   ├── my_slam_env.py                # Isaac Lab environment configuration
+│   ├── cli_args.py                   # RSL-RL argument helpers
+│   ├── deploy_scene_mcp.py           # Runtime scene deployment helper
+│   ├── apt_30p_basic_furnished.py    # Apartment scene generation script
+│   └── apt_4bay_furnished.py         # Apartment scene generation script
+└── .gitignore                        # Local and generated file exclusions
+```
+
+The repository intentionally excludes generated outputs, large local assets, checkpoints, maps, and local assistant configuration files.
+
+- `assets/objects/`
+- `.pretrained_checkpoints/`
+- `maps/`
+- `outputs/`
+- `scripts/outputs/`
+- `__pycache__/`
+- `CLAUDE.md`
+- `.agent/`, `.agents/`, `.codex/`
+
 ## 🏗️ Modules
 
 ### 1. 3D SLAM (RTAB-Map in Isaac Sim)
@@ -90,6 +137,16 @@ rviz2 -d config/go2_sim.rviz
 > ⚠️ **Note**: Please ensure to issue the `2D Goal Pose` from RViz **only after** the robot's localization is successfully completed.
 ---
 
+### 3. Reinforcement Learning
+*Coming Soon: RL environment setup and policy training for Go2 locomotion and intelligent behavior.*
+
+---
+
+### 4. Real-world Deployment
+*Coming Soon: Guidelines and scripts for deploying the developed intelligence on the actual Unitree Go2 robot.*
+
+---
+
 ## ⚙️ Local Path Notes
 
 Some scripts still contain machine-specific paths used during development, such as Isaac Lab, local object assets, policy checkpoints, and optional perception config files.
@@ -109,11 +166,4 @@ Large local assets and generated files are intentionally excluded from GitHub:
 - `.pretrained_checkpoints/`
 - `maps/`
 - `outputs/`
-
-### 3. Reinforcement Learning
-*Coming Soon: RL environment setup and policy training for Go2 locomotion and intelligent behavior.*
-
----
-
-### 4. Real-world Deployment
-*Coming Soon: Guidelines and scripts for deploying the developed intelligence on the actual Unitree Go2 robot.*
+- `scripts/outputs/`
