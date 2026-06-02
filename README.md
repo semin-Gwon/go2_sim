@@ -1,6 +1,6 @@
 # Go2 Intelligence Framework
 
-> This repository is based on content from [ctrlcvlab/Go2_Intelligence_Framework](https://github.com/ctrlcvlab/Go2_Intelligence_Framework).  
+> This repository is based on content from [leesj24601/Go2_Intelligence_Framework](https://github.com/leesj24601/Go2_Intelligence_Framework).  
 > It has been reorganized and adapted for this local `go2_sim` workspace and portfolio-oriented GitHub publication.
 
 `go2_sim` is a ROS2 and Isaac Sim based simulation workspace for Unitree Go2. The project focuses on running Go2 in Isaac Sim, publishing simulated camera/odometry/IMU data through ROS2, building a map with RTAB-Map, and running autonomous navigation with Nav2.
@@ -216,6 +216,6 @@ If a script references an omitted asset, place the required file in the expected
 
 ## License and Attribution
 
-This repository is adapted from [ctrlcvlab/Go2_Intelligence_Framework](https://github.com/ctrlcvlab/Go2_Intelligence_Framework). Check the upstream repository and any third-party packages or assets for their original licenses.
+This repository is adapted from [leesj24601/Go2_Intelligence_Framework](https://github.com/leesj24601/Go2_Intelligence_Framework). Check the upstream repository and any third-party packages or assets for their original licenses.
 
 Custom changes in this local repository do not currently define a separate root license. Before redistribution beyond personal portfolio use, review upstream licenses and add an explicit root `LICENSE` file if needed.
