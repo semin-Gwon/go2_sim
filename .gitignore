@@ -1,0 +1,54 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Simulation / Hydra outputs
+outputs/
+scripts/outputs/
+*.log
+
+# RTAB-Map databases and generated maps
+maps/
+*.db
+*.db3
+*.sqlite
+*.sqlite3
+*.bag
+*.mcap
+*.pcd
+*.ply
+
+# Large local assets
+assets/objects/
+
+# Model checkpoints
+.pretrained_checkpoints/
+*.pt
+*.pth
+*.onnx
+
+# Local assistant / agent configuration
+CLAUDE.md
+.agent/
+.agents/
+.codex/
+
+# Local archive / notes not intended for GitHub
+local_archive/
+
+# Local environment files
+.env
+.env.*
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.tmp
+*~
