@@ -14,7 +14,7 @@ Language: English | [한국어](README.ko.md)
 - RTAB-Map based 3D SLAM and localization workflow.
 - Nav2 based autonomous navigation using the RTAB-Map localization output.
 - RViz configuration for monitoring SLAM, localization, and navigation.
-- Lightweight USD scene files for simulation environments.
+- A lightweight default USD scene file for the simulation environment.
 
 ## Repository Structure
 
@@ -24,12 +24,7 @@ Language: English | [한국어](README.ko.md)
 ├── README.ko.md
 ├── assets/
 │   └── envs/
-│       ├── color_room.usd
-│       ├── empty_room.usd
-│       ├── object_room.usd
-│       ├── room_env.usd
-│       ├── slam_env.usd
-│       └── yolo_env.usd
+│       └── room_env.usd
 ├── config/
 │   ├── go2_nav2_params.yaml
 │   └── go2_sim.rviz
@@ -47,9 +42,7 @@ Language: English | [한국어](README.ko.md)
 │   ├── go2_sim.py
 │   ├── my_slam_env.py
 │   ├── cli_args.py
-│   ├── deploy_scene_mcp.py
-│   ├── apt_30p_basic_furnished.py
-│   └── apt_4bay_furnished.py
+│   └── deploy_scene_mcp.py
 └── .gitignore
 ```
 
@@ -63,7 +56,7 @@ Language: English | [한국어](README.ko.md)
 | `launch/go2_navigation.launch.py` | Nav2 launch file. Starts RTAB-Map in localization mode and includes Nav2 navigation launch with this repository's config. |
 | `config/go2_nav2_params.yaml` | Nav2 parameter file. |
 | `config/go2_sim.rviz` | RViz visualization configuration. |
-| `assets/envs/*.usd` | Lightweight Isaac Sim scene files included in GitHub. |
+| `assets/envs/room_env.usd` | Default lightweight Isaac Sim scene file included in GitHub. |
 
 ## Prerequisites
 
@@ -200,6 +193,7 @@ Large or machine-local files are excluded from GitHub:
 
 ```text
 assets/objects/
+local_archive/
 .pretrained_checkpoints/
 maps/
 outputs/
@@ -213,7 +207,7 @@ CLAUDE.md
 
 ## Notes on Assets and Checkpoints
 
-Only lightweight USD environment files under `assets/envs/` are tracked. Large object assets, generated maps, local checkpoints, and local assistant configuration files are intentionally omitted.
+Only the default lightweight USD environment file, `assets/envs/room_env.usd`, is tracked. Other experimental environment files and apartment scene generation scripts are kept locally under `local_archive/` and are intentionally omitted from GitHub.
 
 If a script references an omitted asset, place the required file in the expected local path or update the corresponding environment variable before running.
 
